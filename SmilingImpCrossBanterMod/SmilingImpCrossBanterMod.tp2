@@ -1,0 +1,873 @@
+BACKUP ~SmilingImpCrossBanterMod\backup~
+AUTHOR ~Smiling Imp: MBONE911@excite.com~
+VERSION ~1.2~
+
+AUTO_TRA ~SmilingImpCrossBanterMod/tra/%s~
+
+ALWAYS
+
+ACTION_DEFINE_ARRAY 9xnoconvert BEGIN END
+ACTION_DEFINE_ARRAY 9xreload BEGIN setup END
+
+  LAF HANDLE_CHARSETS
+    INT_VAR
+      infer_charsets = 1
+    STR_VAR
+      tra_path = EVAL ~%MOD_FOLDER%/tra~
+      noconvert_array = 9xnoconvert
+      reload_array = 9xreload
+  END
+  
+END
+  
+LANGUAGE ~English~
+         ~English~
+         ~SmilingImpCrossBanterMod/tra/English/setup.TRA~
+		 
+LANGUAGE ~Russian (by Austin)~
+         ~Russian~
+         ~SmilingImpCrossBanterMod/tra/Russian/setup.TRA~		 
+		
+// SHAR-TEEL banters		
+BEGIN @1 DESIGNATED 0
+REQUIRE_PREDICATE GAME_IS ~bg2 tob bgt bg2ee eet~ ~Not support game~
+
+REQUIRE_PREDICATE 
+(FILE_EXISTS_IN_GAME ~B7Xshar.dlg~) AND
+(FILE_EXISTS_IN_GAME ~VxVarB.dlg~ OR
+FILE_EXISTS_IN_GAME ~1XAEONB.dlg~ OR
+FILE_EXISTS_IN_GAME ~L3PetsyB.dlg~ OR
+FILE_EXISTS_IN_GAME ~BADANGEL.dlg~ OR
+FILE_EXISTS_IN_GAME ~BSilver.dlg~ OR
+FILE_EXISTS_IN_GAME ~BKINDREK.dlg~ OR
+FILE_EXISTS_IN_GAME ~BSAERILE.dlg~ OR
+FILE_EXISTS_IN_GAME ~BYASRAEN.dlg~ OR
+FILE_EXISTS_IN_GAME ~BTSUJAT.dlg~ OR
+FILE_EXISTS_IN_GAME ~SOLA.dlg~ OR
+FILE_EXISTS_IN_GAME ~VALENJ.dlg~ OR
+FILE_EXISTS_IN_GAME ~LD#SWYB.dlg~ OR
+FILE_EXISTS_IN_GAME ~BSK#NEHT.dlg~ OR
+FILE_EXISTS_IN_GAME ~R#KITYB.dlg~ OR
+FILE_EXISTS_IN_GAME ~BZAIYA.dlg~ OR
+FILE_EXISTS_IN_GAME ~BHorace.dlg~ OR
+FILE_EXISTS_IN_GAME ~R#ALLISB.dlg~ OR
+FILE_EXISTS_IN_GAME ~L7TsukiB.dlg~ OR
+FILE_EXISTS_IN_GAME ~BFWKETO.dlg~ OR
+FILE_EXISTS_IN_GAME ~BBIDDE.dlg~ OR
+FILE_EXISTS_IN_GAME ~BSC#Hub.dlg~ OR
+FILE_EXISTS_IN_GAME ~M#Azrael.dlg~ OR
+FILE_EXISTS_IN_GAME ~M#QuestP.dlg~)
+~This NPC not found; skipping...~
+
+
+APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
+UNLESS ~CD_STATE_NOTVALID~
+
+ACTION_IF FILE_EXISTS_IN_GAME ~VxVarB.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\SharTeelVarshoon.d~ 
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~1XAEONB.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\SharTeelAeon.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~L3PetsyB.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\SharTeelPetsy.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~BADANGEL.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\SharTeelAngelo.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~BSilver.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\SharTeelSilverStar.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~BKINDREK.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\SharTeelKindrek.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~BSAERILE.dlg~ BEGIN
+EXTEND_TOP ~7xshar.bcs~ ~SmilingImpCrossBanterMod\baf\7xshar.baf~
+COMPILE ~SmilingImpCrossBanterMod\dlg\SharTeelSaerileth.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~BYASRAEN.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\SharTeelYasraena.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~BTSUJAT.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\SharTeelTsujatha.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~SOLA.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\SharTeelSolaufein.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~VALENJ.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\SharTeelValen.d~
+EXTEND_TOP ~7xshar.bcs~ ~SmilingImpCrossBanterMod\baf\7xshar.baf~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~LD#SWYB.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\SharTeelSwylif.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~BSK#NEHT.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\SharTeelNehtaniel.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~R#KITYB.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\SharTeelKitanya.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~BZAIYA.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\SharTeelKZ.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~BHorace.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\SharTeelHorace.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~R#ALLISB.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\SharTeelAllison.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~L7TsukiB.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\SharTeelTsuki.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~BFWKETO.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\SharTeelKeto.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~BBIDDE.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\SharTeelBiddekelorak.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~BSC#Hub.dlg~ BEGIN
+COPY ~SmilingImpCrossBanterMod\itm\g#xbcin.itm~ ~Override/g#xbcin.itm~
+SAY NAME1 @23
+SAY NAME2 @23
+SAY UNIDENTIFIED_DESC @23
+SAY DESC @24
+COMPILE ~SmilingImpCrossBanterMod\dlg\SharTeelHubelpot.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~M#Azrael.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\SharTeelAzrael.d~
+EXTEND_TOP ~7xshar.bcs~ ~SmilingImpCrossBanterMod\baf\7xshar.baf~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~M#QuestP.dlg~ BEGIN
+ACTION_IF FILE_EXISTS_IN_GAME ~M#QuestJ.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\SharTeelQuestor.d~
+END ELSE BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\QuestorBegin.d~
+COMPILE ~SmilingImpCrossBanterMod\dlg\SharTeelQuestor.d~
+END
+END
+
+
+// GARRICK banters
+BEGIN @27 DESIGNATED 2
+REQUIRE_PREDICATE GAME_IS ~bg2 tob bgt bg2ee eet~ ~Not support game~
+
+REQUIRE_PREDICATE 
+(FILE_EXISTS_IN_GAME ~B7XGar.dlg~) AND
+(FILE_EXISTS_IN_GAME ~VxVarB.dlg~ OR
+FILE_EXISTS_IN_GAME ~R#ALLISB.dlg~ OR
+FILE_EXISTS_IN_GAME ~1XAEONB.dlg~ OR
+FILE_EXISTS_IN_GAME ~L3PetsyB.dlg~ OR
+FILE_EXISTS_IN_GAME ~BSilver.dlg~ OR
+FILE_EXISTS_IN_GAME ~BKINDREK.dlg~ OR
+FILE_EXISTS_IN_GAME ~BSAERILE.dlg~ OR
+FILE_EXISTS_IN_GAME ~BYASRAEN.dlg~ OR
+FILE_EXISTS_IN_GAME ~BTSUJAT.dlg~ OR
+FILE_EXISTS_IN_GAME ~BZAIYA.dlg~ OR
+FILE_EXISTS_IN_GAME ~BHorace.dlg~ OR
+FILE_EXISTS_IN_GAME ~TB#STIVB.dlg~ OR
+FILE_EXISTS_IN_GAME ~L7TsukiB.dlg~ OR
+FILE_EXISTS_IN_GAME ~BSC#Hub.dlg~ OR
+FILE_EXISTS_IN_GAME ~MWBKID.dlg~ OR
+FILE_EXISTS_IN_GAME ~M#QuestP.dlg~)
+~This NPC not found; skipping...~
+
+
+APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
+UNLESS ~CD_STATE_NOTVALID~
+
+ACTION_IF FILE_EXISTS_IN_GAME ~VxVarB.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\GarrickVarshoon.d~ 
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~1XAEONB.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\GarrickAeon.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~L3PetsyB.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\GarrickPetsy.d~  
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~BSilver.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\GarrickSilverStar.d~ 
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~BKINDREK.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\GarrickKindrek.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~BSAERILE.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\GarrickSaerileth.d~  
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~BYASRAEN.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\GarrickYasraena.d~ 
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~BTSUJAT.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\GarrickTsujatha.d~ 
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~BZAIYA.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\GarrickKZ.d~ 
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~BHorace.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\GarrickHorace.d~ 
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~R#ALLISB.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\GarrickAllison.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~TB#STIVB.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\GarrickStivan.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~L7TsukiB.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\GarrickTsuki.d~   
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~BSC#Hub.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\GarrickHubelpot.d~  
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~MWBKID.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\GarrickKido.d~
+EXTEND_TOP ~7XGARR.bcs~ ~SmilingImpCrossBanterMod\baf\7XGARR.baf~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~M#QuestP.dlg~ BEGIN
+ACTION_IF FILE_EXISTS_IN_GAME ~M#QuestJ.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\GarrickQuestor.d~ 
+END ELSE BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\QuestorBegin.d~
+COMPILE ~SmilingImpCrossBanterMod\dlg\GarrickQuestor.d~ 
+END
+END
+
+
+// BRANWEN banters
+BEGIN @44 DESIGNATED 4
+REQUIRE_PREDICATE GAME_IS ~bg2 tob bgt bg2ee eet~ ~Not support game~
+
+REQUIRE_PREDICATE 
+(FILE_EXISTS_IN_GAME ~7XBRANB.dlg~) AND
+(FILE_EXISTS_IN_GAME ~VxVarB.dlg~ OR
+FILE_EXISTS_IN_GAME ~1XAEONB.dlg~ OR
+FILE_EXISTS_IN_GAME ~BSilver.dlg~ OR
+FILE_EXISTS_IN_GAME ~BSAERILE.dlg~ OR
+FILE_EXISTS_IN_GAME ~BTSUJAT.dlg~ OR
+FILE_EXISTS_IN_GAME ~VALENJ.dlg~ OR
+FILE_EXISTS_IN_GAME ~BZAIYA.dlg~ OR
+FILE_EXISTS_IN_GAME ~BHorace.dlg~ OR
+FILE_EXISTS_IN_GAME ~TB#STIVB.dlg~ OR
+FILE_EXISTS_IN_GAME ~BYASRAEN.dlg~ OR
+FILE_EXISTS_IN_GAME ~M#QuestP.dlg~)
+~This NPC not found; skipping...~
+
+APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
+UNLESS ~CD_STATE_NOTVALID~
+
+ACTION_IF FILE_EXISTS_IN_GAME ~VxVarB.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\BranwenVarshoon.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~1XAEONB.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\BranwenAeon.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~BSilver.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\BranwenSilverStar.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~BSAERILE.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\BranwenSaerileth.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~BTSUJAT.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\BranwenTsujatha.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~VALENJ.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\BranwenValen.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~BZAIYA.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\BranwenKZ.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~BHorace.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\BranwenHorace.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~TB#STIVB.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\BranwenStivan.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~BYASRAEN.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\BranwenYasraena.d~
+EXTEND_TOP ~7xbran.bcs~ ~SmilingImpCrossBanterMod\baf\7xbran.baf~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~M#QuestP.dlg~ BEGIN
+ACTION_IF FILE_EXISTS_IN_GAME ~M#QuestJ.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\BranwenQuestor.d~
+END ELSE BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\QuestorBegin.d~
+COMPILE ~SmilingImpCrossBanterMod\dlg\BranwenQuestor.d~
+END
+END
+
+// YESLICK banters
+BEGIN @56 DESIGNATED 6
+REQUIRE_PREDICATE GAME_IS ~bg2 tob bgt bg2ee eet~ ~Not support game~
+
+REQUIRE_PREDICATE 
+(FILE_EXISTS_IN_GAME ~B7XYES.dlg~) AND
+(FILE_EXISTS_IN_GAME ~VxVarB.dlg~ OR
+FILE_EXISTS_IN_GAME ~1XAEONB.dlg~ OR
+FILE_EXISTS_IN_GAME ~BBIDDE.dlg~ OR
+FILE_EXISTS_IN_GAME ~BZAIYA.dlg~ OR
+FILE_EXISTS_IN_GAME ~BHorace.dlg~ OR
+FILE_EXISTS_IN_GAME ~M#QuestP.dlg~)
+~This NPC not found; skipping...~
+
+
+APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
+UNLESS ~CD_STATE_NOTVALID~
+
+ACTION_IF FILE_EXISTS_IN_GAME ~VxVarB.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\YeslickVarshoon.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~1XAEONB.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\YeslickAeon.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~BBIDDE.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\YeslickBiddekelorak.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~BZAIYA.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\YeslickKZ.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~BHorace.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\YeslickHorace.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~M#QuestP.dlg~ BEGIN
+ACTION_IF FILE_EXISTS_IN_GAME ~M#QuestJ.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\YeslickQuestor.d~
+END ELSE BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\QuestorBegin.d~
+COMPILE ~SmilingImpCrossBanterMod\dlg\YeslickQuestor.d~
+END
+END
+
+
+// ELDOTH banters
+BEGIN @63 DESIGNATED 8
+REQUIRE_PREDICATE GAME_IS ~bg2 tob bgt bg2ee eet~ ~Not support game~
+
+REQUIRE_PREDICATE 
+(FILE_EXISTS_IN_GAME ~B7XEldo.dlg~) AND
+(FILE_EXISTS_IN_GAME ~VxVarB.dlg~ OR
+FILE_EXISTS_IN_GAME ~VALENJ.dlg~ OR
+FILE_EXISTS_IN_GAME ~L7TsukiB.dlg~)
+~This NPC not found; skipping...~
+
+APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
+UNLESS ~CD_STATE_NOTVALID~
+
+ACTION_IF FILE_EXISTS_IN_GAME ~VxVarB.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\EldothVarshoon.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~VALENJ.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\EldothValen.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~L7TsukiB.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\EldothTsuki.d~
+END
+
+
+// ALORA banters
+BEGIN @67 DESIGNATED 10
+REQUIRE_PREDICATE GAME_IS ~bg2 tob bgt bg2ee eet~ ~Not support game~
+
+REQUIRE_PREDICATE 
+FILE_EXISTS_IN_GAME ~7XAloraB.dlg~ AND
+FILE_EXISTS_IN_GAME ~TB#STIVB.dlg~ 
+~This NPC not found; skipping...~
+
+APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
+UNLESS ~CD_STATE_NOTVALID~
+
+COMPILE ~SmilingImpCrossBanterMod\dlg\AloraStivan.d~
+
+
+
+// XZAR & MONTARON banters
+BEGIN @69 DESIGNATED 12
+REQUIRE_PREDICATE GAME_IS ~bg2 tob bgt bg2ee eet~ ~Not support game~
+
+REQUIRE_PREDICATE 
+(FILE_EXISTS_IN_GAME ~7XXZARB.dlg~) AND
+(FILE_EXISTS_IN_GAME ~BSilver.dlg~  OR
+FILE_EXISTS_IN_GAME ~BSK#NEHT.dlg~ OR
+FILE_EXISTS_IN_GAME ~BZAIYA.dlg~  OR
+FILE_EXISTS_IN_GAME ~BHorace.dlg~ OR
+FILE_EXISTS_IN_GAME ~R#KITYB.dlg~ OR
+FILE_EXISTS_IN_GAME ~M#QuestP.dlg~  OR
+FILE_EXISTS_IN_GAME ~TB#STIVB.dlg~ OR
+FILE_EXISTS_IN_GAME ~L7TsukiB.dlg~ OR
+FILE_EXISTS_IN_GAME ~rh#adr.dlg~)
+~This NPC not found; skipping...~
+
+APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
+UNLESS ~CD_STATE_NOTVALID~
+
+ACTION_IF FILE_EXISTS_IN_GAME ~BSilver.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\XzarSilverStar.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~BSK#NEHT.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\XzarNehtaniel.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~BZAIYA.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\XzarKZ.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~BHorace.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\XzarHorace.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~R#KITYB.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\XzarKitanya.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~TB#STIVB.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\XzarStivan.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~L7TsukiB.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\XzarTsuki.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~M#QuestP.dlg~ BEGIN
+ACTION_IF FILE_EXISTS_IN_GAME ~M#QuestJ.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\XzarQuestor.d~
+END ELSE BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\QuestorBegin.d~
+COMPILE ~SmilingImpCrossBanterMod\dlg\XzarQuestor.d~
+END
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~rh#adr.dlg~ BEGIN
+ COMPILE ~SmilingImpCrossBanterMod/dlg/XzarAdrian.d~
+ COMPILE ~SmilingImpCrossBanterMod/baf/Adrian-Xzar/rh#cutXa.baf~
+COMPILE ~SmilingImpCrossBanterMod/baf/Adrian-Xzar/rh#cutXb.baf~
+ COMPILE ~SmilingImpCrossBanterMod/baf/Adrian-Xzar/rh#cutXc.baf~
+ EXTEND_BOTTOM ~rh#adr.bcs~ ~SmilingImpCrossBanterMod/baf/Adrian-Xzar/Adrian-SmilingImpXzar_rh#adr.baf~
+EXTEND_BOTTOM ~7XXZAR.bcs~ ~SmilingImpCrossBanterMod/baf/Adrian-Xzar/Adrian-SmilingImpXzar_7xxzar.baf~
+EXTEND_BOTTOM ~7XMONT.bcs~ ~SmilingImpCrossBanterMod/baf/Adrian-Xzar/Adrian-SmilingImpXzar_7xmont.baf~
+END
+
+
+ACTION_IF FILE_EXISTS_IN_GAME ~BZAIYA.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\MontaronKZ.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~TB#STIVB.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\MontaronStivan.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~BYASRAEN.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\MontaronYasraena.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~M#QuestP.dlg~ BEGIN
+ACTION_IF FILE_EXISTS_IN_GAME ~M#QuestJ.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\MontaronQuestor.d~
+END ELSE BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\QuestorBegin.d~
+COMPILE ~SmilingImpCrossBanterMod\dlg\MontaronQuestor.d~
+END
+END
+
+
+
+// TIAX banters
+BEGIN @83 DESIGNATED 14
+REQUIRE_PREDICATE GAME_IS ~bg2 tob bgt bg2ee eet~ ~Not support game~
+
+REQUIRE_PREDICATE 
+(FILE_EXISTS_IN_GAME ~7XTIAXB.dlg~) AND
+(FILE_EXISTS_IN_GAME ~MWBKID.dlg~  OR
+FILE_EXISTS_IN_GAME ~BYASRAEN.dlg~ OR
+FILE_EXISTS_IN_GAME ~BBIDDE.dlg~  OR
+FILE_EXISTS_IN_GAME ~M#QuestP.dlg~)
+~This NPC not found; skipping...~
+
+APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
+UNLESS ~CD_STATE_NOTVALID~
+
+ACTION_IF FILE_EXISTS_IN_GAME ~BBIDDE.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\TiaxBiddekelorak.d~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~BYASRAEN.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\TiaxYasraena.d~
+EXTEND_TOP ~7xTiax.bcs~ ~SmilingImpCrossBanterMod\baf\7xTiaxYasraena.baf~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~MWBKID.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\TiaxKido.d~
+EXTEND_TOP ~7xTiax.bcs~ ~SmilingImpCrossBanterMod\baf\7xTiaxKido.baf~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~M#QuestP.dlg~ BEGIN
+ACTION_IF FILE_EXISTS_IN_GAME ~M#QuestJ.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\TiaxQuestor.d~
+END ELSE BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\QuestorBegin.d~
+COMPILE ~SmilingImpCrossBanterMod\dlg\TiaxQuestor.d~
+END
+END
+
+
+///////////////////
+//Wilson Chonicles//
+///////////////////
+
+BEGIN @90 DESIGNATED 16
+REQUIRE_PREDICATE GAME_IS ~bg2 tob bgt bg2ee eet~ ~Not support game~
+
+REQUIRE_PREDICATE (FILE_EXISTS_IN_GAME ~L#wilwis.cre~) 
+AND 
+(FILE_EXISTS_IN_GAME ~B7XCoran.dlg~ OR 
+~B7Xsafa.dlg~ OR 
+~B7Xshar.dlg~ OR 
+~7XTIAXB.dlg~ OR 
+~B7XGar.dlg~ OR 
+~7XkagaB.dlg~ OR 
+~7XQUAYB.dlg~ OR
+ ~7XBRANB.dlg~ OR 
+ ~7XMONTB.dlg~ OR 
+ ~7XXZARB.dlg~ OR 
+ ~7XFALDJ.dlg~)
+~This NPC not found; skipping...~
+
+APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
+UNLESS ~CD_STATE_NOTVALID~
+
+ACTION_IF FILE_EXISTS_IN_GAME ~B7XCoran.dlg~ BEGIN
+OUTER_SET WilsonCoran1 = STATE_WHICH_SAYS 73 IN ~WilsonChronicles\tra\%s\bwilson.tra~ FROM ~BEDWIN~
+COMPILE EVALUATE_BUFFER ~SmilingImpCrossBanterMod/dlg/WilsonChronicles/coran.d~ USING ~SmilingImpCrossBanterMod/tra/%LANGUAGE%/wilsonchronicles.tra~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~B7Xsafa.dlg~ BEGIN
+OUTER_SET WilsonSafana1 = STATE_WHICH_SAYS 69 IN ~WilsonChronicles\tra\%s\bwilson.tra~ FROM ~BEDWIN~
+COMPILE EVALUATE_BUFFER ~SmilingImpCrossBanterMod/dlg/WilsonChronicles/safana.d~ USING ~SmilingImpCrossBanterMod/tra/%LANGUAGE%/wilsonchronicles.tra~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~B7Xshar.dlg~ BEGIN
+OUTER_SET WilsonShar1 = STATE_WHICH_SAYS 78 IN ~WilsonChronicles\tra\%s\bwilson.tra~ FROM ~BEDWIN~
+OUTER_SET WilsonShar2 = STATE_WHICH_SAYS 161 IN ~WilsonChronicles\tra\%s\bwilson.tra~ FROM ~BKELDOR~
+COMPILE EVALUATE_BUFFER ~SmilingImpCrossBanterMod/dlg/WilsonChronicles/shar-teel.d~ USING ~SmilingImpCrossBanterMod/tra/%LANGUAGE%/wilsonchronicles.tra~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~7XTIAXB.dlg~ BEGIN
+OUTER_SET WilsonTiax1 = STATE_WHICH_SAYS 76 IN ~WilsonChronicles\tra\%s\bwilson.tra~ FROM ~BEDWIN~
+COMPILE EVALUATE_BUFFER ~SmilingImpCrossBanterMod/dlg/WilsonChronicles/tiax.d~ USING ~SmilingImpCrossBanterMod/tra/%LANGUAGE%/wilsonchronicles.tra~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~B7XGar.dlg~ BEGIN
+OUTER_SET WilsonGarrick1 = STATE_WHICH_SAYS 104 IN ~WilsonChronicles\tra\%s\bwilson.tra~ FROM ~BHAERDA~
+COMPILE EVALUATE_BUFFER ~SmilingImpCrossBanterMod/dlg/WilsonChronicles/garrick.d~ USING ~SmilingImpCrossBanterMod/tra/%LANGUAGE%/wilsonchronicles.tra~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~7XkagaB.dlg~ BEGIN
+OUTER_SET WilsonKagain1 = STATE_WHICH_SAYS 150 IN ~WilsonChronicles\tra\%s\bwilson.tra~ FROM ~BJAN~
+COMPILE EVALUATE_BUFFER ~SmilingImpCrossBanterMod/dlg/WilsonChronicles/garrick.d~ USING ~SmilingImpCrossBanterMod/tra/%LANGUAGE%/wilsonchronicles.tra~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~7XQUAYB.dlg~ BEGIN
+OUTER_SET WilsonQuayle1 = STATE_WHICH_SAYS 190 IN ~WilsonChronicles\tra\%s\bwilson.tra~ FROM ~BMINSC~
+COMPILE EVALUATE_BUFFER ~SmilingImpCrossBanterMod/dlg/WilsonChronicles/quayle.d~ USING ~SmilingImpCrossBanterMod/tra/%LANGUAGE%/wilsonchronicles.tra~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~7XBRANB.dlg~ BEGIN
+OUTER_SET WilsonBranwen1 = STATE_WHICH_SAYS 206 IN ~WilsonChronicles\tra\%s\bwilson.tra~ FROM ~BNALIA~
+COMPILE EVALUATE_BUFFER ~SmilingImpCrossBanterMod/dlg/WilsonChronicles/branwen.d~ USING ~SmilingImpCrossBanterMod/tra/%LANGUAGE%/wilsonchronicles.tra~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~7XMONTB.dlg~ BEGIN
+OUTER_SET WilsonMontaron1 = STATE_WHICH_SAYS 206 IN ~WilsonChronicles\tra\%s\bwilson.tra~ FROM ~BNALIA~
+COMPILE EVALUATE_BUFFER ~SmilingImpCrossBanterMod/dlg/WilsonChronicles/montaron.d~ USING ~SmilingImpCrossBanterMod/tra/%LANGUAGE%/wilsonchronicles.tra~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~7XXZARB.dlg~ BEGIN
+OUTER_SET WilsonXzar1 = STATE_WHICH_SAYS 218 IN ~WilsonChronicles\tra\%s\bwilson.tra~ FROM ~BVALYGA~
+COMPILE EVALUATE_BUFFER ~SmilingImpCrossBanterMod/dlg/WilsonChronicles/xzar.d~ USING ~SmilingImpCrossBanterMod/tra/%LANGUAGE%/wilsonchronicles.tra~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~7XFALDJ.dlg~ BEGIN
+OUTER_SET WilsonFaldorn1 = STATE_WHICH_SAYS 211 IN ~WilsonChronicles\tra\%s\wilsonj.tra~ FROM ~WILSONJ~
+COMPILE EVALUATE_BUFFER ~SmilingImpCrossBanterMod/dlg/WilsonChronicles/faldorn.d~ USING ~SmilingImpCrossBanterMod/tra/%LANGUAGE%/wilsonchronicles.tra~
+END
+
+// Disabled because most of the improved portraits are included in the main BG1 NPC in BG2 mod
+/*
+
+BEGIN @87 DESIGNATED 210
+GROUP @88
+
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Princess Sweets\SHARTELL.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Princess Sweets\SHARTELM.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Princess Sweets\SHARTELS.bmp~ ~override~
+END ELSE BEGIN
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Princess Sweets\SHARTELL.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Princess Sweets\SHARTELM.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Princess Sweets\SHARTELS.bmp~ ~override~
+END
+
+
+BEGIN @89
+GROUP @88
+SUBCOMPONENT @90 
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Syntia13\branweL.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Syntia13\branweM.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Syntia13\branweS.bmp~ ~override~
+END ELSE BEGIN
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Syntia13\branweL.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Syntia13\branweM.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Syntia13\branweS.bmp~ ~override~
+END
+
+BEGIN @91
+GROUP @88
+SUBCOMPONENT @90 
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Miloch\branweL.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Miloch\branweM.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Miloch\branweS.bmp~ ~override~
+END ELSE BEGIN
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Miloch\branweL.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Miloch\branweM.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Miloch\branweS.bmp~ ~override~
+END
+
+
+BEGIN @92
+GROUP @88
+SUBCOMPONENT @90 
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Miloch\Branwen Purple\branweL.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Miloch\Branwen Purple\branweM.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Miloch\Branwen Purple\branweS.bmp~ ~override~
+END ELSE BEGIN
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Miloch\Branwen Purple\branweL.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Miloch\Branwen Purple\branweM.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Miloch\Branwen Purple\branweS.bmp~ ~override~
+END
+
+BEGIN @93
+GROUP @88
+SUBCOMPONENT @90 
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Katrina\branweL.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Katrina\branweM.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Katrina\branweS.bmp~ ~override~
+END ELSE BEGIN
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Katrina\branweL.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Katrina\branweM.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Katrina\branweS.bmp~ ~override~
+END
+
+BEGIN @94
+GROUP @88
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Lady Mystique\GARRICKL.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Lady Mystique\GARRICKM.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Lady Mystique\GARRICKS.bmp~ ~override~
+END ELSE BEGIN
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Lady Mystique\GARRICKL.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Lady Mystique\GARRICKM.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Lady Mystique\GARRICKS.bmp~ ~override~
+END
+
+BEGIN @95 
+GROUP @88
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Lady Nightshade\YESLICKL.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Lady Nightshade\YESLICKM.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Lady Nightshade\YESLICKs.bmp~ ~override~
+END ELSE BEGIN
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Lady Nightshade\YESLICKL.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Lady Nightshade\YESLICKM.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Lady Nightshade\YESLICKs.bmp~ ~override~
+END
+
+BEGIN @99 
+SUBCOMPONENT @98
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Princess Sweets\CoranL.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Princess Sweets\CoranM.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Princess Sweets\CoranS.bmp~ ~override~
+END ELSE BEGIN
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Princess Sweets\CoranL.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Princess Sweets\CoranM.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Princess Sweets\CoranS.bmp~ ~override~
+END
+
+BEGIN @100 
+SUBCOMPONENT @98
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Sanctifer\CoranL.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Sanctifer\CoranM.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Sanctifer\CoranS.bmp~ ~override~
+END ELSE BEGIN
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Sanctifer\CoranL.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Sanctifer\CoranM.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Sanctifer\CoranS.bmp~ ~override~
+END
+
+BEGIN @101
+GROUP @88
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Syntia13\AloraL.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Syntia13\AloraM.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Syntia13\AloraS.bmp~ ~override~
+END ELSE BEGIN
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Syntia13\AloraL.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Syntia13\AloraM.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Syntia13\AloraS.bmp~ ~override~
+END
+
+BEGIN @102
+GROUP @88
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Syntia13\AjantisL.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Syntia13\AjantisM.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Syntia13\AjantisS.bmp~ ~override~
+END ELSE BEGIN
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Syntia13\AjantisL.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Syntia13\AjantisM.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Syntia13\AjantisS.bmp~ ~override~
+END
+
+BEGIN @104
+GROUP @88 
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Miloch\FALDORNL.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Miloch\FALDORNM.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Miloch\FALDORNs.bmp~ ~override~
+END ELSE BEGIN
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Miloch\FALDORNL.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Miloch\FALDORNM.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Miloch\FALDORNs.bmp~ ~override~
+END
+
+BEGIN @105
+GROUP @88
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Archmage Silver\KIVANL.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Archmage Silver\KIVANM.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Archmage Silver\KIVANs.bmp~ ~override~
+END ELSE BEGIN
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Archmage Silver\KIVANL.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Archmage Silver\KIVANM.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Archmage Silver\KIVANs.bmp~ ~override~
+END
+
+BEGIN @106
+GROUP @88 
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Lady Nightshade\MONTARL.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Lady Nightshade\MONTARM.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Lady Nightshade\MONTARS.bmp~ ~override~
+END ELSE BEGIN
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Lady Nightshade\MONTARL.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Lady Nightshade\MONTARM.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Lady Nightshade\MONTARS.bmp~ ~override~
+END
+
+BEGIN @107 
+GROUP @88
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Sanctifer\XZARL.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Sanctifer\XZARM.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Sanctifer\XZARS.bmp~ ~override~
+END ELSE BEGIN
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Sanctifer\XZARL.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Sanctifer\XZARM.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Sanctifer\XZARS.bmp~ ~override~
+END
+
+
+BEGIN @108
+GROUP @88
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Syntia13\XanL.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Syntia13\XanM.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Syntia13\XanS.bmp~ ~override~
+END ELSE BEGIN
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Syntia13\XanL.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Syntia13\XanM.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Syntia13\XanS.bmp~ ~override~
+END
+
+
+BEGIN @109
+GROUP @88
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Syntia13\QuayleL.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Syntia13\QuayleM.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Syntia13\QuayleS.bmp~ ~override~
+END ELSE BEGIN
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Syntia13\QuayleL.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Syntia13\QuayleM.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Syntia13\QuayleS.bmp~ ~override~
+END
+
+BEGIN @110
+GROUP @88
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Princess Sweets\TiaxL.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Princess Sweets\TiaxM.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\EE\Princess Sweets\Tiaxs.bmp~ ~override~
+END ELSE BEGIN
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Princess Sweets\TiaxL.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Princess Sweets\TiaxM.bmp~ ~override~
+COPY ~SmilingImpCrossBanterMod\PICS\vanilla\Princess Sweets\Tiaxs.bmp~ ~override~
+END
+
+*/
