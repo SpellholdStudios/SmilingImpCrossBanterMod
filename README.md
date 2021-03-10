@@ -1,1 +1,1 @@
-Cross Banter between the BG1 NPCs (from this mod: http://www.baldursgatemods.com/forums/index.php?board=133.0) and you custom mod favorites like Silver Star, Varshoon, Yasraena, Saerileth, Tsujatha, Horace, Kindrek & many more!
+Cross Banters between the BG1 NPCs (from this mod: http://www.baldursgatemods.com/forums/index.php?board=133.0) and you custom mod favorites like Silver Star, Varshoon, Yasraena, Saerileth, Tsujatha, Horace, Kindrek & many more!
