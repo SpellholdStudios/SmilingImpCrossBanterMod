@@ -27,6 +27,7 @@ Global("ZaiyaGarrick","GLOBAL",0)~ THEN ~B7XGar~ GarrickZaiyaTalk_01
 == BZAIYA @11
 == B7XGar @12
 EXIT
+
 CHAIN IF
 ~InParty("Kiara")!StateCheck("Kiara",CD_STATE_NOTVALID)
 InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)
