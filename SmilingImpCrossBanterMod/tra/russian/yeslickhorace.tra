@@ -1,12 +1,10 @@
-@0    = ~Ye fight well, Horace. I would ask ye ta join me in a strong dwarven ale later, but how are ye goin' ta drink anything when
-ye havna got any flesh.~
-@1    = ~I could still join you and enjoy the company, although I am not sure that I would be accepted in most of the
-local pubs.~
-@2    = ~Don't ye worry yer skull, they be nothin' but a bunch of copper pinchers. If ye have the coin, they accept anybody.~
-@3    = ~If ye enter with empty pockets though, they might kick ye on yer arse!~
-@4    = ~My arse?~
-@5    = ~Aye, yer arse!~
-@6    = ~Ye wield a mighty hammer, Yeslick, but ye wield an even mightier beer flagon!~
-@7    = ~Are ye mockin' me, talkin' like that?~
-@8    = ~Calma down, will ye? Ye probably had too much elven wine er somthin'.~
-@9    = ~Elven wine? I'd sooner kiss a troll than be caught drinkin' that goblin piss!~
+@0 = ~Ты неплохо сражаешься, Хорас. Я бы позвал тебя на кружечку крепкого дварфского эля, но как ты будешь его пить, если у тебя на костях нет мяса?~
+@1 = ~Я все равно могу присоединиться и насладиться компанией - хотя не уверен, что меня пустят в местные пабы.~
+@2 = ~Не волнуйся, череп, они любят только медяки. Если у тебя есть монеты, они примут кого угодно.~
+@3 = ~Но если зайдешь с пустыми карманами, они могут надрать тебе задницу! ~
+@4 = ~Мою задницу? ~
+@5 = ~Да, твою задницу! ~
+@6 = ~Ты держишь тяжелый молот, Йеслик, но пивной кувшин у тебя еще тяжелее! ~
+@7 = ~Ты издеваешься надо мной или что? ~
+@8 = ~Успокойся, ладно? Ты, наверное, выпил слишком много эльфийского вина или еще чего.~
+@9 = ~Эльфийского вина? Я скорее тролля поцелую, чем выпью этой гоблинской мочи!~

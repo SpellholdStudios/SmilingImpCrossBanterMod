@@ -1,14 +1,10 @@
-@0    = ~What an exquisite piece of work you are, Horace. I wonder which brilliant necromancer made you into the remarkable specimen
-that you are.~
-@1    = ~What makes you think that my being is the result of the work of a necromancer? Could it not be the divine
-influence of one of the gods themselves?~
-@2    = ~If you consider roaming around Faerыn for all eternity as a pile of bones, divine influence, I'd hate to see what
-the gods do to those they curse.~ [xzar20]
-@3    = ~I'm sure that you will find that out for yourself one day, Xzar.~
-@4    = ~You are real piece of living art, Horace!~
-@5    = ~You really must come and see my art exhibit one day. I sure that if anyone can appreciate the beauty in death, it will be
-you.~
-@6    = ~If you admire death so much, Xzar, why don't I help you across the threshold so you can see it for yourself?~
-@7    = ~I have seen it. Must say, I found it rather boring. The beauty in death, my friend, is in creating it!
-Bwhahahaha!~ [xzar3]
-@8    = ~Just be careful that someone does not create a masterpiece out of you.~
+@0 = ~Ты так прекрасно выглядишь, Хорас. Интересно, что за гениальный некромант превратил тебя в такой замечательный экземпляр? ~
+@1 = ~Почему ты думаешь, что тут поработал некромант? Разве это не могло быть влияние одного из богов?~
+@2 = ~Если ты думаешь, что твое вечное блуждание по Фаэруну как груды костей - дело рук богов, мне бы очень не хотелось видеть, что боги делают с теми, кого они проклинают.~ [Xzar20]
+@3 = ~Думаю, однажды ты узнаешь это на себе, Кзар. ~
+
+@4 = ~Ты настоящее произведение искусства, Хорас! ~
+@5 = ~Тебе правда стоит однажды зайти и посмотреть мою художественную выставку. Если кто и сможет оценить красоту смерти, так это ты.~
+@6 = ~Если ты так восхищаешься смертью, Кзар, почему бы мне не помочь тебе переступить порог? Ну, чтобы ты сам увидел ее?~
+@7 = ~Я ее видел. Должен сказать, мне это показалось довольно скучным. Красота смерти, друг мой, заключается в ее создании! Бухахахаха!~ [Xzar3]
+@8 = ~Только будь осторожен, а то кто-нибудь и из тебя создаст шедевр. ~
