@@ -1,6 +1,6 @@
 BACKUP ~SmilingImpCrossBanterMod\backup~
 AUTHOR ~Smiling Imp: MBONE911@excite.com~
-VERSION ~1.3~
+VERSION ~1.4~
 
 AUTO_TRA ~SmilingImpCrossBanterMod/tra/%s~
 
@@ -568,20 +568,7 @@ END
 BEGIN @90 DESIGNATED 16
 REQUIRE_PREDICATE GAME_IS ~bg2 tob bgt bg2ee eet~ ~Not support game~
 
-REQUIRE_PREDICATE (FILE_EXISTS_IN_GAME ~L#wilwis.cre~) 
-AND 
-(FILE_EXISTS_IN_GAME ~B7XCoran.dlg~ OR 
-~B7Xsafa.dlg~ OR 
-~B7Xshar.dlg~ OR 
-~7XTIAXB.dlg~ OR 
-~B7XGar.dlg~ OR 
-~7XkagaB.dlg~ OR 
-~7XQUAYB.dlg~ OR
- ~7XBRANB.dlg~ OR 
- ~7XMONTB.dlg~ OR 
- ~7XXZARB.dlg~ OR 
- ~7XFALDJ.dlg~)
-~This NPC not found; skipping...~
+REQUIRE_PREDICATE (FILE_EXISTS_IN_GAME ~L#wilwis.cre~) ~Wilson not found; skipping...~
 
 APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
 UNLESS ~CD_STATE_NOTVALID~
@@ -614,7 +601,7 @@ END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~7XkagaB.dlg~ BEGIN
 OUTER_SET WilsonKagain1 = STATE_WHICH_SAYS 150 IN ~WilsonChronicles\tra\%s\bwilson.tra~ FROM ~BJAN~
-COMPILE EVALUATE_BUFFER ~SmilingImpCrossBanterMod/dlg/WilsonChronicles/garrick.d~ USING ~SmilingImpCrossBanterMod/tra/%LANGUAGE%/wilsonchronicles.tra~
+COMPILE EVALUATE_BUFFER ~SmilingImpCrossBanterMod/dlg/WilsonChronicles/kagain.d~ USING ~SmilingImpCrossBanterMod/tra/%LANGUAGE%/wilsonchronicles.tra~
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~7XQUAYB.dlg~ BEGIN
