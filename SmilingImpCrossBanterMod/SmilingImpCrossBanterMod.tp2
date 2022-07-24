@@ -1,6 +1,6 @@
 BACKUP ~SmilingImpCrossBanterMod\backup~
 AUTHOR ~Smiling Imp: MBONE911@excite.com~
-VERSION ~1.4~
+VERSION ~1.5~
 
 AUTO_TRA ~SmilingImpCrossBanterMod/tra/%s~
 
@@ -55,6 +55,7 @@ FILE_EXISTS_IN_GAME ~L7TsukiB.dlg~ OR
 FILE_EXISTS_IN_GAME ~BFWKETO.dlg~ OR
 FILE_EXISTS_IN_GAME ~BBIDDE.dlg~ OR
 FILE_EXISTS_IN_GAME ~BSC#Hub.dlg~ OR
+FILE_EXISTS_IN_GAME ~QI#ELAB.dlg~ OR
 FILE_EXISTS_IN_GAME ~M#Azrael.dlg~ OR
 FILE_EXISTS_IN_GAME ~M#QuestP.dlg~)
 ~This NPC not found; skipping...~
@@ -168,6 +169,12 @@ COMPILE ~SmilingImpCrossBanterMod\dlg\SharTeelQuestor.d~
 END
 END
 
+ACTION_IF FILE_EXISTS_IN_GAME ~QI#ELAB.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\elaryn-sharteel.d~
+COMPILE ~SmilingImpCrossBanterMod\dlg\minyae-sharteel.d~
+END
+
+
 
 // GARRICK banters
 BEGIN @27 DESIGNATED 2
@@ -189,6 +196,7 @@ FILE_EXISTS_IN_GAME ~BHorace.dlg~ OR
 FILE_EXISTS_IN_GAME ~TB#STIVB.dlg~ OR
 FILE_EXISTS_IN_GAME ~L7TsukiB.dlg~ OR
 FILE_EXISTS_IN_GAME ~BSC#Hub.dlg~ OR
+FILE_EXISTS_IN_GAME ~QI#ELAB.dlg~ OR
 FILE_EXISTS_IN_GAME ~MWBKID.dlg~ OR
 FILE_EXISTS_IN_GAME ~M#QuestP.dlg~)
 ~This NPC not found; skipping...~
@@ -267,6 +275,11 @@ COMPILE ~SmilingImpCrossBanterMod\dlg\GarrickQuestor.d~
 END
 END
 
+ACTION_IF FILE_EXISTS_IN_GAME ~QI#ELAB.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\elaryn-garrick.d~
+COMPILE ~SmilingImpCrossBanterMod\dlg\minyae-garrick.d~
+END
+
 
 // BRANWEN banters
 BEGIN @44 DESIGNATED 4
@@ -283,6 +296,7 @@ FILE_EXISTS_IN_GAME ~VALENJ.dlg~ OR
 FILE_EXISTS_IN_GAME ~BZAIYA.dlg~ OR
 FILE_EXISTS_IN_GAME ~BHorace.dlg~ OR
 FILE_EXISTS_IN_GAME ~TB#STIVB.dlg~ OR
+FILE_EXISTS_IN_GAME ~QI#ELAB.dlg~ OR
 FILE_EXISTS_IN_GAME ~BYASRAEN.dlg~ OR
 FILE_EXISTS_IN_GAME ~M#QuestP.dlg~)
 ~This NPC not found; skipping...~
@@ -340,6 +354,12 @@ COMPILE ~SmilingImpCrossBanterMod\dlg\BranwenQuestor.d~
 END
 END
 
+ACTION_IF FILE_EXISTS_IN_GAME ~QI#ELAB.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\elaryn-branwen.d~
+COMPILE ~SmilingImpCrossBanterMod\dlg\minyae-branwen.d~
+END
+
+
 // YESLICK banters
 BEGIN @56 DESIGNATED 6
 REQUIRE_PREDICATE GAME_IS ~bg2 tob bgt bg2ee eet~ ~Not support game~
@@ -350,6 +370,7 @@ REQUIRE_PREDICATE
 FILE_EXISTS_IN_GAME ~1XAEONB.dlg~ OR
 FILE_EXISTS_IN_GAME ~BBIDDE.dlg~ OR
 FILE_EXISTS_IN_GAME ~BZAIYA.dlg~ OR
+FILE_EXISTS_IN_GAME ~QI#ELAB.dlg~ OR
 FILE_EXISTS_IN_GAME ~BHorace.dlg~ OR
 FILE_EXISTS_IN_GAME ~M#QuestP.dlg~)
 ~This NPC not found; skipping...~
@@ -387,14 +408,20 @@ COMPILE ~SmilingImpCrossBanterMod\dlg\YeslickQuestor.d~
 END
 END
 
+ACTION_IF FILE_EXISTS_IN_GAME ~QI#ELAB.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\elaryn-yeslick.d~
+COMPILE ~SmilingImpCrossBanterMod\dlg\minyae-yeslick.d~
+END
 
-// ELDOTH banters
+
+// SKIE & ELDOTH banters
 BEGIN @63 DESIGNATED 8
 REQUIRE_PREDICATE GAME_IS ~bg2 tob bgt bg2ee eet~ ~Not support game~
 
 REQUIRE_PREDICATE 
 (FILE_EXISTS_IN_GAME ~B7XEldo.dlg~) AND
 (FILE_EXISTS_IN_GAME ~VxVarB.dlg~ OR
+FILE_EXISTS_IN_GAME ~QI#ELAB.dlg~ OR
 FILE_EXISTS_IN_GAME ~VALENJ.dlg~ OR
 FILE_EXISTS_IN_GAME ~L7TsukiB.dlg~)
 ~This NPC not found; skipping...~
@@ -414,21 +441,35 @@ ACTION_IF FILE_EXISTS_IN_GAME ~L7TsukiB.dlg~ BEGIN
 COMPILE ~SmilingImpCrossBanterMod\dlg\EldothTsuki.d~
 END
 
+ACTION_IF FILE_EXISTS_IN_GAME ~QI#ELAB.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\elaryn-eldoth.d~
+COMPILE ~SmilingImpCrossBanterMod\dlg\minyae-eldoth.d~
+COMPILE ~SmilingImpCrossBanterMod\dlg\elaryn-skie.d~
+COMPILE ~SmilingImpCrossBanterMod\dlg\minyae-skie.d~
+END
+
 
 // ALORA banters
 BEGIN @67 DESIGNATED 10
 REQUIRE_PREDICATE GAME_IS ~bg2 tob bgt bg2ee eet~ ~Not support game~
 
 REQUIRE_PREDICATE 
-FILE_EXISTS_IN_GAME ~7XAloraB.dlg~ AND
-FILE_EXISTS_IN_GAME ~TB#STIVB.dlg~ 
+(FILE_EXISTS_IN_GAME ~7XAloraB.dlg~) AND
+(FILE_EXISTS_IN_GAME ~TB#STIVB.dlg~ OR
+FILE_EXISTS_IN_GAME ~QI#ELAB.dlg~)
 ~This NPC not found; skipping...~
 
 APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
 UNLESS ~CD_STATE_NOTVALID~
 
+ACTION_IF FILE_EXISTS_IN_GAME ~TB#STIVB.dlg~ BEGIN
 COMPILE ~SmilingImpCrossBanterMod\dlg\AloraStivan.d~
+END
 
+ACTION_IF FILE_EXISTS_IN_GAME ~QI#ELAB.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\elaryn-alora.d~
+COMPILE ~SmilingImpCrossBanterMod\dlg\minyae-alora.d~
+END
 
 
 // XZAR & MONTARON banters
@@ -444,6 +485,7 @@ FILE_EXISTS_IN_GAME ~BHorace.dlg~ OR
 FILE_EXISTS_IN_GAME ~R#KITYB.dlg~ OR
 FILE_EXISTS_IN_GAME ~M#QuestP.dlg~  OR
 FILE_EXISTS_IN_GAME ~TB#STIVB.dlg~ OR
+FILE_EXISTS_IN_GAME ~QI#ELAB.dlg~ OR
 FILE_EXISTS_IN_GAME ~L7TsukiB.dlg~ OR
 FILE_EXISTS_IN_GAME ~rh#adr.dlg~)
 ~This NPC not found; skipping...~
@@ -520,9 +562,15 @@ COMPILE ~SmilingImpCrossBanterMod\dlg\MontaronQuestor.d~
 END
 END
 
+ACTION_IF FILE_EXISTS_IN_GAME ~QI#ELAB.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\elaryn-montaron.d~
+COMPILE ~SmilingImpCrossBanterMod\dlg\elaryn-xzar.d~
+COMPILE ~SmilingImpCrossBanterMod\dlg\minyae-montaron.d~
+COMPILE ~SmilingImpCrossBanterMod\dlg\minyae-xzar.d~
+END
 
 
-// TIAX banters
+// TIAX & QUAYLE banters
 BEGIN @83 DESIGNATED 14
 REQUIRE_PREDICATE GAME_IS ~bg2 tob bgt bg2ee eet~ ~Not support game~
 
@@ -530,6 +578,7 @@ REQUIRE_PREDICATE
 (FILE_EXISTS_IN_GAME ~7XTIAXB.dlg~) AND
 (FILE_EXISTS_IN_GAME ~MWBKID.dlg~  OR
 FILE_EXISTS_IN_GAME ~BYASRAEN.dlg~ OR
+FILE_EXISTS_IN_GAME ~QI#ELAB.dlg~ OR
 FILE_EXISTS_IN_GAME ~BBIDDE.dlg~  OR
 FILE_EXISTS_IN_GAME ~M#QuestP.dlg~)
 ~This NPC not found; skipping...~
@@ -559,6 +608,14 @@ COMPILE ~SmilingImpCrossBanterMod\dlg\QuestorBegin.d~
 COMPILE ~SmilingImpCrossBanterMod\dlg\TiaxQuestor.d~
 END
 END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~QI#ELAB.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\elaryn-tiax.d~
+COMPILE ~SmilingImpCrossBanterMod\dlg\minyae-tiax.d~
+COMPILE ~SmilingImpCrossBanterMod\dlg\elaryn-quayle.d~
+COMPILE ~SmilingImpCrossBanterMod\dlg\minyae-quayle.d~
+END
+
 
 
 ///////////////////
@@ -628,6 +685,102 @@ ACTION_IF FILE_EXISTS_IN_GAME ~7XFALDJ.dlg~ BEGIN
 OUTER_SET WilsonFaldorn1 = STATE_WHICH_SAYS 211 IN ~WilsonChronicles\tra\%s\wilsonj.tra~ FROM ~WILSONJ~
 COMPILE EVALUATE_BUFFER ~SmilingImpCrossBanterMod/dlg/WilsonChronicles/faldorn.d~ USING ~SmilingImpCrossBanterMod/tra/%LANGUAGE%/wilsonchronicles.tra~
 END
+
+
+// Coran & Safana banters
+BEGIN @70 DESIGNATED 18
+REQUIRE_PREDICATE GAME_IS ~bg2 tob bgt bg2ee eet~ ~Not support game~
+
+REQUIRE_PREDICATE 
+(FILE_EXISTS_IN_GAME ~B7XCoran.dlg~) AND
+(FILE_EXISTS_IN_GAME ~QI#ELAB.dlg~  OR
+FILE_EXISTS_IN_GAME ~QI#MIB.dlg~)
+~This NPC not found; skipping...~
+
+APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
+UNLESS ~CD_STATE_NOTVALID~
+
+ACTION_IF FILE_EXISTS_IN_GAME ~QI#ELAB.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\elaryn-coran.d~
+COMPILE ~SmilingImpCrossBanterMod\dlg\elaryn-safana.d~
+COMPILE ~SmilingImpCrossBanterMod\dlg\minyae-coran.d~
+COMPILE ~SmilingImpCrossBanterMod\dlg\minyae-safana.d~
+END
+
+// Deekin banters
+BEGIN @71 DESIGNATED 20
+REQUIRE_PREDICATE GAME_IS ~bg2 tob bgt bg2ee eet~ ~Not support game~
+
+REQUIRE_PREDICATE 
+(FILE_EXISTS_IN_GAME ~BDEEKIN.dlg~) AND
+(FILE_EXISTS_IN_GAME ~QI#ELAB.dlg~  OR
+FILE_EXISTS_IN_GAME ~QI#MIB.dlg~)
+~This NPC not found; skipping...~
+
+APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
+UNLESS ~CD_STATE_NOTVALID~
+
+ACTION_IF FILE_EXISTS_IN_GAME ~QI#ELAB.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\elaryn-deekin.d~
+COMPILE ~SmilingImpCrossBanterMod\dlg\minyae-deekin.d~
+END
+
+// Faldorn banters
+BEGIN @72 DESIGNATED 22
+REQUIRE_PREDICATE GAME_IS ~bg2 tob bgt bg2ee eet~ ~Not support game~
+
+REQUIRE_PREDICATE 
+(FILE_EXISTS_IN_GAME ~7XFALDB.dlg~) AND
+(FILE_EXISTS_IN_GAME ~QI#ELAB.dlg~  OR
+FILE_EXISTS_IN_GAME ~QI#MIB.dlg~)
+~This NPC not found; skipping...~
+
+APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
+UNLESS ~CD_STATE_NOTVALID~
+
+ACTION_IF FILE_EXISTS_IN_GAME ~QI#ELAB.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\elaryn-faldorn.d~
+COMPILE ~SmilingImpCrossBanterMod\dlg\minyae-faldorn.d~
+END
+
+// Kagain banters
+BEGIN @73 DESIGNATED 24
+REQUIRE_PREDICATE GAME_IS ~bg2 tob bgt bg2ee eet~ ~Not support game~
+
+REQUIRE_PREDICATE 
+(FILE_EXISTS_IN_GAME ~7XKagaB.dlg~) AND
+(FILE_EXISTS_IN_GAME ~QI#ELAB.dlg~  OR
+FILE_EXISTS_IN_GAME ~QI#MIB.dlg~)
+~This NPC not found; skipping...~
+
+APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
+UNLESS ~CD_STATE_NOTVALID~
+
+ACTION_IF FILE_EXISTS_IN_GAME ~QI#ELAB.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\elaryn-kagain.d~
+COMPILE ~SmilingImpCrossBanterMod\dlg\minyae-kagain.d~
+END
+
+// Kivan banters
+BEGIN @74 DESIGNATED 26
+REQUIRE_PREDICATE GAME_IS ~bg2 tob bgt bg2ee eet~ ~Not support game~
+
+REQUIRE_PREDICATE 
+(FILE_EXISTS_IN_GAME ~7XKIVAB.dlg~) AND
+(FILE_EXISTS_IN_GAME ~QI#ELAB.dlg~  OR
+FILE_EXISTS_IN_GAME ~QI#MIB.dlg~)
+~This NPC not found; skipping...~
+
+APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
+UNLESS ~CD_STATE_NOTVALID~
+
+ACTION_IF FILE_EXISTS_IN_GAME ~QI#ELAB.dlg~ BEGIN
+COMPILE ~SmilingImpCrossBanterMod\dlg\elaryn-kivan.d~
+COMPILE ~SmilingImpCrossBanterMod\dlg\minyae-kivan.d~
+END
+
+
+
 
 // Disabled because most of the improved portraits are included in the main BG1 NPC in BG2 mod
 /*
