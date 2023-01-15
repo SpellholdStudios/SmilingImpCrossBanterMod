@@ -28,7 +28,7 @@ CHANGELOG:
 
 1.5 (24/07/2022) – added banters between NPCs from Smiling Imp and NPCs from jmaeq's "The Beaurin Legacy" mod
 
-1.6 (29/12/2022) – added readme-file
+1.6 (29/12/2022) – added readme-file; -added Montaron sound reference in Wilson banter.
 
 
 
