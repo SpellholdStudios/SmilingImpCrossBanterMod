@@ -28,7 +28,13 @@ CHANGELOG:
 
 1.5 (24/07/2022) – added banters between NPCs from Smiling Imp and NPCs from jmaeq's "The Beaurin Legacy" mod
 
-1.6 (29/12/2022) – added readme-file; -added Montaron sound reference in Wilson banter.
+1.6 (29/12/2022) – added readme-file
+
+1.7 (01/02/2023):
+- added banters with some NPCs from Jastey and Kulyok, which were previously included in the main «BG1 NPCs for SoA&ToB» mod.
+- extended Russian translation (thanks Ulpian!)
+- simplified installation. Now all dialogs that can be installed are installed automatically.
+
 
 
 
