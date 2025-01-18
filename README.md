@@ -1,3 +1,9 @@
+<hr>
+
+:warning: **The maintenance and support of this project has been moved to a [new repository](https://github.com/Spellhold-Studios/Smiling-Imp-Cross-Banter-Mod).**
+
+<hr><br>
+
 # Smiling Imp's Cross Banter Mod
 
 This is an add-on to the mod [BG1 NPCs for SoA&ToB](http://www.shsforums.net/files/file/974-bg1-npcs-for-soa-tob/). It adds banters between Smiling Imp’s NPCs and other NPCs (Silver Star, Varshoon, Biddekelorak, Yasraena, Saerileth, Tsujatha, Horace, Kindrek, NPCs from "The Beaurin Legacy" mod etc.)
