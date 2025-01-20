@@ -1,6 +1,6 @@
 <hr>
 
-:warning: **The maintenance and support of this project has been moved to a [new repository](https://github.com/Spellhold-Studios/Smiling-Imp-Cross-Banter-Mod).**
+:warning: **All content of this mod is now included in the [Crossmod Banter Pack](https://github.com/Gibberlings3/Crossmod_Banter_Pack_for_Baldurs_Gate_II).**
 
 <hr><br>
 
@@ -12,11 +12,7 @@ It must be installed AFTER BG1 NPCs for SoA&ToB mod and after all other NPC mods
 
 The mod is compatible with BG2, BG2: EE and EET.
 
-Note: For downloading the current version from GitHub, make sure you go to the releases page and download the [latest release of this mod!](https://github.com/SpellholdStudios/SmilingImpCrossBanterMod/releases)
-
 [Visit the mod's forum at Spellhold Studios](http://www.shsforums.net/forum/686-bg1-npcs-for-soa-tob/)
-
-[Download the mod from Spellhold Studios](http://www.shsforums.net/files/category/143-bg1-npcs-for-soa-tob/) (same version as here)
 
 ## Copyrights Information
 
